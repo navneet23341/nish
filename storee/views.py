@@ -26,7 +26,7 @@ def productList(request):
 
 
 @api_view(['GET','POST'])
-def product_details(request, productId =None):
+def product_details_view(request, productId =None):
     if request.method == 'POST':
         try:
             productId = request.data.get('productId')
@@ -49,10 +49,10 @@ def product_details(request, productId =None):
 
         try:
             product = Products.objects.get(productId=productId)
-            product_details = product_details.objects.get(product=product)
-            serializer = ProductDetailSerializer(product_details)
+            details = ProductDetails.objects.get(product=product)
+            serializer = ProductDetailSerializer(details)
             return Response(serializer.data, status=200)
         except Products.DoesNotExist:
             return Response({'error': 'User not found'}, status=404)
-        except product_details.DoesNotExist:
+        except ProductDetails.DoesNotExist:
             return Response({'error': 'User details not found'}, status=404)
