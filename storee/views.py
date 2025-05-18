@@ -35,7 +35,7 @@ def product_details(request, productId =None):
             return Response({'error': 'Products not found'}, status=404)
 
         data = request.data.copy()
-        data['user'] = user.id  # set user ID for the foreign key
+        data['product'] = product.id  # set user ID for the foreign key
         serializer = ProductDetailSerializer(data=data)
 
         if serializer.is_valid():
