@@ -2,36 +2,34 @@ from rest_framework import serializers
 from .models import User_Profile
 from django.contrib.auth.models import User
 
-class UserProfileSerializer():
-    class Meta :
+                                # class UserProfileSerializer():
+                                #     class Meta :
+                                #         model = User_Profile
+                                #         fields = ['phoneNumber', 'address', 'city', 'state', 'zipcode' , 'country']
+class UserProfileSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(source='user.username', read_only=True)
+    email = serializers.CharField(source='user.email', read_only=True)
+    first_name = serializers.CharField(source='user.first_name', read_only=True)
+    last_name = serializers.CharField(source='user.last_name', read_only=True)
+    class Meta:
         model = User_Profile
-        fields = ['phoneNumber', 'address', 'city', 'state', 'zipcode' , 'country']
+        fields = '__all__'
 
 
 class UserSerializer(serializers.ModelSerializer):
-    profile = UserProfileSerializer()  # nested serializer
+    #profile = UserProfileSerializer()  # nested serializer
     password = serializers.CharField(write_only=True)
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'password', 'first_name', 'last_name', 'profile']
+        fields = ['username', 'email', 'password', 'first_name', 'last_name']
+        extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
-        profile_data = validated_data.pop('profile')
         user = User.objects.create_user(
             username=validated_data['username'],
-            email=validated_data['email'],
             password=validated_data['password'],
-            first_name=validated_data.get('first_name', ''),
-            last_name=validated_data.get('last_name', '')
-        )
-        User_Profile.objects.create(
-            user=user,
-            address=profile_data['address'],
-            city=profile_data['city'],
-            state = profile_data['state'],
-            zipcode=profile_data['zipcode'],
-            country = profile_data['country'],
-            phoneNumber=profile_data['phoneNumber']
+            email=validated_data.get('email', ''),
+            first_name=validated_data.get('first_name', '')
         )
         return user
