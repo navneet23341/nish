@@ -6,3 +6,18 @@ class Products(models.Model):
     productId = models.CharField(max_length=5)
     price = models.CharField(max_length=15)
     #image = 
+
+    def __str__(self):
+        return self.productName
+
+class ProductDetails():
+    product = models.OneToOneField(Products , on_delete= models.CASCADE)
+
+    yarnType = models.CharField(max_length= 15)
+    category = models.CharField(max_length=15)
+    size = models.CharField(max_length= 10)
+
+    def __str__(self):
+        return f"{self.product} + {self.yarnType} + {self.category} + {self.size}"
+    
+    
