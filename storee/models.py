@@ -10,7 +10,7 @@ class Products(models.Model):
     def __str__(self):
         return self.productName
 
-class ProductDetails():
+class ProductDetails(models.Model):
     product = models.OneToOneField(Products , on_delete= models.CASCADE)
 
     yarnType = models.CharField(max_length= 15)
@@ -19,5 +19,4 @@ class ProductDetails():
 
     def __str__(self):
         return f"{self.product} + {self.yarnType} + {self.category} + {self.size}"
-    
     
