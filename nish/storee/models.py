@@ -5,7 +5,7 @@ class Products(models.Model):
     productName= models.CharField(max_length= 30 , null= True)
     productId = models.CharField(max_length=5)
     price = models.CharField(max_length=15)
-    #image = 
+    image = models.ImageField(upload_to='product_images/', null=True, blank=True)
 
     def __str__(self):
         return self.productName
