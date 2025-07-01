@@ -1,8 +1,10 @@
 import {motion} from "framer-motion"
 import sample from "./assets/sample.jpg"
 import ProductTemp from "./productTemp"
+import { useNavigate } from "react-router-dom";
 
 function Shopping(){
+    const navigate = useNavigate();
 
     return(
 

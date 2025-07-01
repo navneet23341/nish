@@ -54,9 +54,9 @@ function Page(){
                 
                 <div className="m-5 mt-10 mb-16 bg-purple-100 w-full">
                     <FadeInSection delay={0.4}>
-                    <div className="bg-stone-300 min-h-[13rem] flex items-center justify-center text-center overflow-x-hidden border-4 border-stone-300 rounded-4xl">
+                    <div className="bg-stone-300 min-h-[13rem] flex items-center justify-center text-center overflow-x-hidden border-2 border-grey-500 rounded-4xl">
                         <div className="text-6xl font-bold inline-block">Dorisaa..</div>
-                        <div className="inline text-2xl mt-4 overflow-x-hidden"> about us we make crochet with love and perfection and we know you love that and trust us you'll love that</div>
+                        <div className="inline text-2xl mt-4 overflow-x-hidden"> about us we make crochet items with love and perfection and we know you love that and trust us you'll love that</div>
                     </div>
                     </FadeInSection>
                 </div>
