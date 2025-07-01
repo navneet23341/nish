@@ -38,8 +38,8 @@ function Page(){
                             animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
                             transition={{ duration: 0.8, delay: 0.5 }} >
                                 <h1 className="text-5xl md:text-7xl text-purple-900 font-bold">handcrafted crochet with love! Dorisa..</h1>
-                                <h1 className="text-xl md:text-3xl">_</h1>
-                                <button onClick={() => navigate("/shop")} className="justify-center shadow-md hover:scale-105 text-purple-100 px-20 py-20 bg-purple-900 rounded-lg hover:bg-slate-900 transition-duration-300 text-2xl hover:shadow-lg transition-transform">shop now</button>
+                                <div className="my-5 h-7"></div>
+                                <button onClick={() => navigate("/shop")}className="justify-center shadow-md hover:scale-105 text-purple-100 px-20 py-20 bg-purple-900 rounded-lg hover:bg-slate-900 transition-duration-300 text-2xl hover:shadow-lg transition-transform">shop now</button>
                                 </motion.div>
                 </div>
 
@@ -57,8 +57,9 @@ function Page(){
                 
                 <div className="m-5 mt-10 mb-16 bg-purple-100 w-full">
                     <FadeInSection delay={0.4}>
-                    <div className="bg-purple-900 text-purple-100 min-h-[13rem] flex items-center justify-center text-center overflow-x-hidden border-2 border-slate-900 rounded-4xl">
+                    <div className="bg-purple-900 text-purple-100 min-h-[13rem] flex flex-col items-center justify-center text-center overflow-x-hidden border-2 border-slate-900 rounded-4xl">
                         <div className="text-6xl font-bold">Dorisaa..</div>
+                        <div className="h-5 my-5"></div>
                         <div className="text-2xl mt-4 overflow-x-hidden"> about us we make crochet items with love and perfection and we know you love that and trust us you'll love that</div>
                     </div>
                     </FadeInSection>
@@ -86,7 +87,7 @@ function Page(){
             </div>
             </div>
             <footer className="h-42 p-6 text-purple-100 justify-center bg-slate-900">
-            <div className="my-10 h-10"></div>
+            <div className="my-10 h-10 text-amber-100"></div>
                 <h2>hi this is footer </h2>
                 <h2>feel free to buy , all product are for you</h2>
                 <h2>you can give custom order also</h2>

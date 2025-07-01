@@ -7,6 +7,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Page from './frontpage';
 import ShoppingList from './shoppingList';
 import ProductDetail from './ProductDetail';
+import ScrollToTop from './ScrollToTop.jsx'; 
 
 
 
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <HashRouter>
+      {/* <ScrollToTop/> */}
       <Routes>
         <Route path="/" element={<Page />} />
         <Route path="/shop" element={<ShoppingList />} />
