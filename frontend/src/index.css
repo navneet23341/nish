@@ -67,8 +67,10 @@ button:focus-visible {
   }
 } */
 @import "tailwindcss";
-
+/*@import url('https://fonts.googleapis.com/css2?family=Savate:ital,wght@0,200..900;1,200..900&display=swap');*/
 /* src/index.css */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -83,4 +85,5 @@ html, body, #root {
   overflow-x: hidden;
   box-sizing: border-box
 }
+
 

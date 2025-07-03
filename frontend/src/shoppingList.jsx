@@ -2,6 +2,7 @@ import {motion} from "framer-motion"
 import sample from "./assets/sample.jpg"
 import ProductTemp from "./productTemp"
 import { useNavigate } from "react-router-dom";
+import Squares from './Squares';
 
 function Shopping(){
     const navigate = useNavigate();
@@ -9,6 +10,7 @@ function Shopping(){
     return(
 
         <div className="bg-purple-100 min-h-screen">
+            
             <div className="overflow-x-hidden">
                 <header className="relative h-20 bg-purple-900 text-purple-100 flex items-center justify-between px-6">
                     <div className="absolute left-6 font-bold top-1/2 -translate-y-1/2 text-3xl">Dorisaa</div>
@@ -26,7 +28,8 @@ function Shopping(){
                                 <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                             animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
                             transition={{ duration: 0.8, delay: 0.5 }} >
-                                <h1 className="text-5xl md:text-7xl text-purple-900 font-bold">welcomm to shopping list..</h1>
+                                <h1 className="text-5xl md:text-7xl text-purple-900 font-bold">welcome to shopping list..</h1>
+                                <hr/>
                                 </motion.div>
                 </div>
 
