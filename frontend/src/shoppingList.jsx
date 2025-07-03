@@ -24,16 +24,15 @@ function Shopping(){
 
             <div className="my-10 h-5"></div>
 
-            <div className="h-30 overflow-x-hidden" >
+            <div className="h-30 overflow-x-hidden border-2 border-black flex items-center justify-center" >
                                 <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                             animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
                             transition={{ duration: 0.8, delay: 0.5 }} >
-                                <h1 className="text-5xl md:text-7xl text-purple-900 font-bold">welcome to shopping list..</h1>
-                                <hr/>
+                                <h1 className="text-5xl md:text-7xl text-purple-900 font-bold text-center">welcome to shopping list..</h1>
                                 </motion.div>
                 </div>
 
-            <section className="w-full mt-10 mb-5 flex justify-center">
+            <section className="w-full mt-10 mb-5 flex justify-center border-2 border-black">
                     <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                         animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
                         transition={{ duration: 0.8, delay: 1.0 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-20">

@@ -31,7 +31,7 @@ function ProductDetail() {
         {/* Product Info */}
         <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                             animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
-                            transition={{ duration: 0.8, delay: 1.2 }}  className="flex flex-col justify-center items-center space-y-4">
+                            transition={{ duration: 0.8, delay: 1.2 }}  className="flex flex-col justify-center items-center space-y-4 border-2 border-black">
               <div className='border-1 border-black'>
                 <h1 className="text-3xl text-slate-800 font-bold">Crochet Top brown</h1>
                 <p className="text-lg text-gray-700">This beautifully handcrafted crochet top blends traditional artistry with modern elegance. Made with premium quality cotton yarn, it features an intricate open-knit pattern that’s breathable, soft on the skin, and perfect for warm days. The delicate mix of brown and cream tones creates a natural, earthy aesthetic that complements all skin tones and styles effortlessly.

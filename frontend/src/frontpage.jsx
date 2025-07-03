@@ -34,14 +34,14 @@ function Page(){
                     
                 </header>
 
-                <section className="h-120 bg-[#A2D2FF] flex flex-col items-center justify-center text-center overflow-x-hidden">
+                <section className="h-120 bg-[#A2D2FF] flex flex-col items-center justify-center text-center overflow-x-hidden border-1 border-black ">
                     <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                                 animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
                                 transition={{ duration: 0.8, delay: 0.5 }}
                                 className="flex flex-col items-center justify-center text-center space-y-8 overflow-y-hidden" >
                         <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl text-[#CDB4DB] font-bold overflow-y-hidden">Handcrafted crochet <br/> with love! <br/>Dorisa</h1>
                         <div className="my-5 h-7"></div>
-                        <button onClick={() => navigate("/shop")}className="justify-center shadow-md hover:scale-105 text-purple-100 px-60 py-40 bg-purple-900 rounded-lg hover:bg-slate-900 transition-duration-300 text-3xl hover:shadow-lg transition-transform border">shop now</button>
+                        <button onClick={() => navigate("/shop")}className="justify-center shadow-md hover:scale-105 text-purple-100 px-60 py-40 bg-purple-900 rounded-lg hover:bg-slate-900 transition-duration-300 text-3xl hover:shadow-lg transition-transform border-2 border-black">shop now</button>
                     </motion.div>
                 </section>
                 
@@ -73,7 +73,7 @@ function Page(){
                 <div className="h-10 bg-purple-200"></div>
                     <FadeInSection delay={0.4}>
                     <div className="h-100 bg-[#FFC8DD] text-purple-100 min-h-[13rem] flex flex-col items-center justify-center text-center overflow-x-hidden border-2 border-black">
-                        <div className="text-[#BDE0FE] font-bold">Dorisaa..</div>
+                        <div className="text-6xl te font-bold">Dorisaa..</div>
                         <div className="h-5 my-5"></div>
                         <div className="text-2xl mt-4 overflow-x-hidden">about us we make crochet items with love and perfection and we know you love that and trust us you'll love that</div>
                     </div>
@@ -83,11 +83,11 @@ function Page(){
                 <div className="my-10 h-14"></div>
 
                 <div className="bg-purple-100 overflow-x-hidden">
-                    <FadeInSection delay={0.4}>
-                    <div className="bg-purple-100 overflow-x-hidden">
+                    <FadeInSection delay={0.4} className="bg-green-200">
+                    <div className="bg-green-200 overflow-x-hidden border-2 border-black">
                     <h1 className="text-gray-700 text-4xl mb-20 text-center">Categories</h1>
                     <div className="my-10 h-5"></div>
-                        <div className=" bg-purple-100 flex justify-center gap-8 mt-10">
+                        <div className=" bg-green-200 flex justify-center gap-8 mt-10">
                             <div className="justify-center gap-8 w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 overflow-hidden">
                                 <Categories/>
                                 <Categories/>
