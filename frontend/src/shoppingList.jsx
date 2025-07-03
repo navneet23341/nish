@@ -12,7 +12,7 @@ function Shopping(){
         <div className="bg-purple-100 min-h-screen">
             
             <div className="overflow-x-hidden">
-                <header className="relative h-20 bg-purple-900 text-purple-100 flex items-center justify-between px-6">
+                <header className="relative h-20 bg-black text-[#f9f9f9] flex items-center justify-between px-6">
                     <div className="absolute left-6 font-bold top-1/2 -translate-y-1/2 text-3xl">Dorisaa</div>
                         {/*<nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl space-x-6 gap-4">
                             <a href="">All </a>
@@ -24,15 +24,15 @@ function Shopping(){
 
             <div className="my-10 h-5"></div>
 
-            <div className="h-30 overflow-x-hidden border-2 border-black flex items-center justify-center" >
+            <div className="h-30 overflow-x-hidden bg-[#ffb5a7] border-2 border-black flex items-center justify-center" >
                                 <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                             animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
                             transition={{ duration: 0.8, delay: 0.5 }} >
-                                <h1 className="text-5xl md:text-7xl text-purple-900 font-bold text-center">welcome to shopping list..</h1>
+                                <h1 className="text-5xl md:text-7xl text-black font-bold text-center">welcome to shopping list..</h1>
                                 </motion.div>
                 </div>
 
-            <section className="w-full mt-10 mb-5 flex justify-center border-2 border-black">
+            <section className="w-full mt-10 mb-5 bg-[#e9ff70] flex justify-center border-2 border-black">
                     <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                         animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
                         transition={{ duration: 0.8, delay: 1.0 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-14 gap-y-20">
