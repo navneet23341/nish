@@ -3,6 +3,7 @@ import sample from "./assets/sample.jpg"
 import Categories from "./Categories"
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import ScrollVelocity from './ScrollVelocity';
 
 const FadeInSection = ({ children, delay = 0 }) => {
     return (
@@ -23,8 +24,9 @@ function Page(){
     return( 
         <div className="bg-purple-100 min-h-screen">
             <div className="overflow-x-hidden">
-                <header className="relative w-full bg-purple-900 p-6 text-purple-100 m-0 overflow-x-hidden h-20">
-                    <div className="absolute left-6 font-bold top-1/2 -translate-y-1/2 text-3xl">Dorisaa</div>
+                <header className="relative w-full bg-purple-900 p-6 text-purple-100 m-0 overflow-x-hidden h-20
+                ">
+                    <div className="absolute left-6 font-bold top-1/2 -translate-y-1/2 text-4xl">Dorisa</div>
                     {/* <nav className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-xl space-x-6">
                         <a href="">product </a>
                         <a href="">about </a>
@@ -33,23 +35,34 @@ function Page(){
                     
                 </header>
 
-                <div className="h-62 w-full bg-purple-100 flex flex-col items-center justify-center text-center space-y-8 overflow-x-hidden" >
-                                <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
-                            animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
-                            transition={{ duration: 0.8, delay: 0.5 }} >
-                                <h1 className="text-5xl md:text-7xl text-purple-900 font-bold">handcrafted crochet with love! Dorisa..</h1>
-                                <div className="my-5 h-7"></div>
-                                <button onClick={() => navigate("/shop")}className="justify-center shadow-md hover:scale-105 text-purple-100 px-20 py-20 bg-purple-900 rounded-lg hover:bg-slate-900 transition-duration-300 text-2xl hover:shadow-lg transition-transform">shop now</button>
-                                </motion.div>
-                </div>
+                <section className="h-120 bg-purple-200 flex flex-col items-center justify-center text-center overflow-x-hidden">
+                    <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
+                                animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
+                                transition={{ duration: 0.8, delay: 0.5 }}
+                                className="flex flex-col items-center justify-center text-center space-y-8 overflow-y-hidden" >
+                        <h1 className="text-5xl sm:text-6xl md:text-6xl lg:text-7xl text-purple-900 font-bold overflow-y-hidden">Handcrafted crochet <br/> with love! <br/>Dorisa</h1>
+                        <div className="my-5 h-7"></div>
+                        <button onClick={() => navigate("/shop")}className="justify-center shadow-md hover:scale-105 text-purple-100 px-60 py-40 bg-purple-900 rounded-lg hover:bg-slate-900 transition-duration-300 text-3xl hover:shadow-lg transition-transform border">shop now</button>
+                    </motion.div>
+                </section>
 
-                <div className=" bg-purple-100 flex justify-center gap-8 mt-10 mb-30">
+                <ScrollVelocity
+                    texts={['Dorisa Trending', 'Scroll Down']} 
+                    velocity={100} 
+                    className="custom-scroll-text border border-black-100"
+                    />
+
+                <div className="h-10 bg-purple-200"></div>
+                <hr/>
+                <div className="my-10 h-10 bg-purple-300"></div>
+
+                <div className=" bg-purple-100 flex items-center justify-center gap-4 sm:mt-30 sm:mb-30">
                     <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                             animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
-                            transition={{ duration: 0.8, delay: 1.0 }} className="justify-center gap-8 w-fit mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2">
-                        <TopPicks/>
-                        <TopPicks/>
-                        <TopPicks/>
+                            transition={{ duration: 0.8, delay: 1.0 }} className="max-w-screen-md mx-auto grid grid-cols-3 grid-rows-2 sm:grid-rows-1 gap-4">
+                        <div class="col-span-2 row-span-2 sm:col-start-1 sm:col-span-1  aspect-square w-full"><TopPicks/></div>
+                        <div class="aspect-square w-full sm:col-start-2 sm:col-span-1 "><TopPicks/></div>
+                        <div class="aspect-square w-full sm:col-start-3 sm:col-span-1 "><TopPicks/></div>
                     </motion.div>
                 </div>
 
