@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function ProductDetail() {
   return (
-    <div className="bg-purple-100 min-h-screen">
+    <div className="bg-[#f3d8c7] min-h-screen">
         <div className="overflow-x-hidden">
                 <header className="relative h-20 bg-black flex items-center justify-between px-6">
                     <div className="absolute text-[#f9f9f9] font-bold left-6 top-1/2 -translate-y-1/2 text-3xl">Dorisaa</div>
@@ -31,7 +31,7 @@ function ProductDetail() {
         {/* Product Info */}
         <motion.div initial={{ opacity: 0, y: 20 }}        // start off invisible + moved down
                             animate={{ opacity: 1, y: 0 }}          // end at normal position, visible
-                            transition={{ duration: 0.8, delay: 1.2 }}  className="bg-[#ffac81] flex flex-col justify-center items-center space-y-4 border-2 border-black">
+                            transition={{ duration: 0.8, delay: 1.2 }}  className="bg-[#e26d5c] flex flex-col justify-center items-center space-y-4 border-2 border-black">
               <div className='border-1 border-black bg-[#dfe7fd] '>
                 <h1 className="text-3xl text-slate-800 font-bold">Crochet Top brown</h1>
                 <p className="text-lg text-gray-700">This beautifully handcrafted crochet top blends traditional artistry with modern elegance. Made with premium quality cotton yarn, it features an intricate open-knit pattern that’s breathable, soft on the skin, and perfect for warm days. The delicate mix of brown and cream tones creates a natural, earthy aesthetic that complements all skin tones and styles effortlessly.
